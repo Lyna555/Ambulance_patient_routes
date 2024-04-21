@@ -49,13 +49,13 @@ temps_service = [0, 30, 30, 50, 45]
 
 # Densite
 
-# mat = np.zeros(25)
-# densite = mat.reshape(5,5)
+mat = np.zeros(25)
+densite = mat.reshape(5,5)
 
-# for i in I:
-#     for j in I:
-#         if i!=j:
-#             densite[i,j] = round(((180-(temps_service[i]+temps_service[j]))*(180-(temps_service[i]+temps_service[j])))/temps_trajet[i,j])
+for i in I:
+    for j in I:
+        if i!=j:
+            densite[i,j] = round(((180-(temps_service[i]+temps_service[j]))**2)/temps_trajet[i,j])
 
 
 for vehicle_count in range(1,max_vehicle_count+1):
